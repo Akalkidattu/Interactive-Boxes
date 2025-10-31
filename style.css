@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+
+.heading {
+    text-align: center;
+    color: #d54ae7;
+    margin-bottom: 1rem;
+}
+
+.offer-box {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.offer-box.active {
+    border-color: #8448a0;
+    background-color: #fff4f7;
+}
+
+.offer-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.offer-info p {
+    margin: 3px 0;
+}
+
+.discount {
+    background-color: #df6acf;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+}
+
+.discount.popular {
+    background-color: #df6acf;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.offer-details {
+    margin-top: 0.8rem;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.offer-box.active .offer-details {
+    display: block;
+}
+
+.pair {
+    margin-bottom: 0.6rem;
+}
+
+label {
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+select {
+    padding: 3px 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+}
+
+.delivery {
+    color: #d816be;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.total {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.add-cart {
+    width: 100%;
+    background-color: #f02cf0;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-cart:hover {
+    background-color: #ff2e64;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
